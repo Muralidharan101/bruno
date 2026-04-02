@@ -1,0 +1,24 @@
+info:
+  name: Testing Open AI Models
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/utils/ai-test"
+  body:
+    type: json
+    data: |-
+      {
+        "model_name": "o4-mini-deep-research",
+        "provider": "openai",
+        "system_prompt": "You are an expert OSINT researcher specializing in identifying employees of companies using publicly available data such as LinkedIn, GitHub, StackOverflow, company websites, conference pages, and resumes. Always verify matches using company name variants.",
+        "prompt": "Identify software developers or engineers working at Golden Opportunities Pvt Ltd, India. Search for people listing this company in their experience. Provide: name, role, tech stack if known, profile link, and confidence level (high/medium/low). Also list company tech stack indicators based on employee skills."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,25 @@
+info:
+  name: Search Candidates (meilisearch)
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/v1/candidates/search?q=vineelamannar95@gmail.com&page=1&limit=50"
+  params:
+    - name: q
+      value: vineelamannar95@gmail.com
+      type: query
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "50"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

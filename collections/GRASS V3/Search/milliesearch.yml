@@ -1,0 +1,26 @@
+info:
+  name: milliesearch
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/candidates/formSearchMeili"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"page\": 1,\r
+
+      \    \"limit\": 50,\r
+
+      \    \"search\": \"8870831376\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,36 @@
+info:
+  name: Form Search
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/v1/candidates/formSearch?page=1&limit=50&search=murali"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "50"
+      type: query
+    - name: search
+      value: murali
+      type: query
+  body:
+    type: json
+    data: "{\r
+
+      \    \"page\": 1,\r
+
+      \    \"limit\": 1,\r
+
+      \    \"search\": \"muralidharan\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

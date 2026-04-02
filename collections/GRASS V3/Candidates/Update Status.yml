@@ -1,0 +1,28 @@
+info:
+  name: Update Status
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/candidates/updateStatus"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"candidateId\": \"690b3d037618cd5e0cdbdaa6\", \r
+
+      \    \"jobId\": \"690b3d037618cd5e0cdbdaa3\", \r
+
+      \    \"status\": \"Processed\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTBiM2NmZDc2MThjZDVlMGNkYmM5MTIiLCJlbWFpbCI6ImFkbWluQGdvam9icy5iaXoiLCJpYXQiOjE3NjI4MzkyMjIsImV4cCI6MTc2NTQzMTIyMn0.Su2Nc-hMPJzSWi_Pa_u6Fq9RDflpfaWHDEfH5JXAjeo
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

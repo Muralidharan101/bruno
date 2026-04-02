@@ -1,0 +1,24 @@
+info:
+  name: Tag Candidates
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/candidates/tagCandidateToNewJob"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"candidateId\": \"690b3d037618cd5e0cdbdaf6\",\r
+
+      \    \"jobId\": \"690b3cff7618cd5e0cdbcc66\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

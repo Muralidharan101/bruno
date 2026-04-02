@@ -1,0 +1,25 @@
+info:
+  name: Get All Candidates
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/v1/candidates?search=Muralidharan&page=1&limit=50"
+  params:
+    - name: search
+      value: Muralidharan
+      type: query
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "50"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

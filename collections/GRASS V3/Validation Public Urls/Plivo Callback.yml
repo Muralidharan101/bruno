@@ -1,0 +1,178 @@
+info:
+  name: Plivo Callback
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://182.72.36.229/plivo_v2/ai-caller/callback
+  body:
+    type: json
+    data: "{\r
+
+      \  \"created_at\": \"2025-03-18T10:42:15.234Z\",\r
+
+      \  \"data\": {\r
+
+      \    \"object\": {\r
+
+      \      \"call_uuid\": \"6ae069ff-1828-400f-a7d9-01ef74868bc6\",\r
+
+      \      \"conversation_id\": \"conv_91e2caa3c8b44a3a\",\r
+
+      \      \"conversation_url\": \"https://voice.example.com/conversations/conv_91e2caa3c8b44a3a\",\r
+
+      \      \"event_data\": {\r
+
+      \        \"is_agent_assigned\": true,\r
+
+      \        \"call_duration\": 612,\r
+
+      \        \"Queue to Manager.content_type\": \"application/json\",\r
+
+      \        \"Queue to Manager.response\": \"Queued successfully to manager\",\r
+
+      \        \"Queue to Manager.status_code\": 200,\r
+
+      \        \"Email Dispatch.content_type\": \"application/json\",\r
+
+      \        \"Email Dispatch.response\": \"Email sent to recruiter\",\r
+
+      \        \"Email Dispatch.status_code\": 202,\r
+
+      \        \"Introduction and Time Check.callback_time\": \"2025-03-20T11:00:00+05:30\",\r
+
+      \        \"Ask Screening Questions.screening_answers\": {\r
+
+      \          \"experience_years\": 4,\r
+
+      \          \"primary_skill\": \"Node.js\",\r
+
+      \          \"willing_to_relocate\": true,\r
+
+      \          \"availability\": \"Immediate\"\r
+
+      \        },\r
+
+      \        \"Call Candidate.uuid\": \"plivo-call-77a9d1f5\",\r
+
+      \        \"Call Candidate.to\": \"+919876543210\",\r
+
+      \        \"Call Candidate.from\": \"+18005551234\",\r
+
+      \        \"Call Candidate.direction\": \"outbound\",\r
+
+      \        \"Call Candidate.from_iso2\": \"US\",\r
+
+      \        \"Call Candidate.leg\": \"a\",\r
+
+      \        \"Call Candidate.bill_rate\": 0.006,\r
+
+      \        \"Call Candidate.from_country\": \"United States\",\r
+
+      \        \"Call Candidate.voicemail_detected\": false,\r
+
+      \        \"Call Candidate.call_status\": \"completed\",\r
+
+      \        \"Call Candidate.conversation_id\": \"conv_91e2caa3c8b44a3a\",\r
+
+      \        \"Start.request_type\": \"http\",\r
+
+      \        \"Start.flow_run_id\": \"flowrun_4f9b9e2c3a\",\r
+
+      \        \"Start.http.params\": {\r
+
+      \          \"candidate_data\": {\r
+
+      \            \"resume_id\": \"resume_88291\",\r
+
+      \            \"skills\": [\"Node.js\", \"MongoDB\", \"Redis\"]\r
+
+      \          },\r
+
+      \          \"candidate_email\": \"candidate.demo@gmail.com\",\r
+
+      \          \"candidate_id\": \"cand_10293\",\r
+
+      \          \"candidate_maximum_experience\": 6,\r
+
+      \          \"candidate_minimum_experience\": 3,\r
+
+      \          \"candidate_name\": \"Arjun Kumar\",\r
+
+      \          \"candidate_phone\": \"+919876543210\",\r
+
+      \          \"from_number\": \"+18005551234\",\r
+
+      \          \"job_description\": \"Backend Developer with Node.js and MongoDB experience\",\r
+
+      \          \"job_id\": \"job_77821\",\r
+
+      \          \"job_maximum_experience\": 6,\r
+
+      \          \"job_minimum_experience\": 3,\r
+
+      \          \"job_name\": \"Backend Developer\",\r
+
+      \          \"recruiter_id\": \"recruiter_4412\",\r
+
+      \          \"recruiter_question\": \"Are you available for a technical interview this week?\"\r
+
+      \        },\r
+
+      \        \"Email Service Query.content_type\": \"application/json\",\r
+
+      \        \"Email Service Query.response\": \"Fetched recruiter email template\",\r
+
+      \        \"Email Service Query.status_code\": 200,\r
+
+      \        \"Collect Additional Details.current_ctc\": \"6.5 LPA\",\r
+
+      \        \"Collect Additional Details.expected_ctc\": \"9 LPA\",\r
+
+      \        \"Collect Additional Details.notice_period\": \"30 days\",\r
+
+      \        \"Collect Additional Details.certifications\": [\r
+
+      \          \"AWS Certified Developer\",\r
+
+      \          \"MongoDB Associate\"\r
+
+      \        ],\r
+
+      \        \"Email Service Request.content_type\": \"application/json\",\r
+
+      \        \"Email Service Request.response\": \"Candidate summary email sent\",\r
+
+      \        \"Email Service Request.status_code\": 202,\r
+
+      \        \"Closing and Consent.consent_status\": \"granted\"\r
+
+      \      },\r
+
+      \      \"event_name\": \"hangup\",\r
+
+      \      \"flow_name\": \"Pre-Screening Recruiter Agent 2\",\r
+
+      \      \"flow_run_uuid\": \"f6b2d3e9-0c14-4c3b-bb7d-89c9c02d98aa\",\r
+
+      \      \"flow_uuid\": \"9e76ec62-1d64-4015-9ae9-7b23a5c835a4\",\r
+
+      \      \"node_name\": \"Call Candidate\"\r
+
+      \    }\r
+
+      \  },\r
+
+      \  \"id\": \"evt_7c9e12b8-5a3d-4f8a-bf5c-9d2e14a33f91\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: a64e498d5dd7d84d602b6602f858f87a44a9e73014a6fbc8499fd2a42a7a7817
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

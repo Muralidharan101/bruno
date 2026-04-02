@@ -1,0 +1,900 @@
+info:
+  name: Meilisearch Hybrid
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/candidates/formSearchHybrid"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"query\": \"Java developer working cts\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"limit\": 10,\r
+
+      \  \"semanticRatio\": 0.5,\r
+
+      \  \"useAI\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Meilisearch Hybrid
+    request:
+      url: "{{local_url}}/api/v1/candidates/formSearchHybrid"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"query\": \"Database Management previously worked in Trigent Software\",\r
+
+          \  \"page\": 1,\r
+
+          \  \"limit\": 10,\r
+
+          \  \"semanticRatio\": 1\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: X-Powered-By
+          value: Express
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Length
+          value: "30595"
+        - name: ETag
+          value: W/"7783-0LObKIb3SaoICILZPYtbh7zsUxU"
+        - name: Date
+          value: Thu, 22 Jan 2026 07:05:41 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "status": 200,
+              "message": "AI Search Results",
+              "data": [
+                  {
+                      "_id": "69673bfa54f63603dab3738f",
+                      "recruiter_id": null,
+                      "old_candidate_id": 103242,
+                      "recruiter_username": null,
+                      "full_name": "Kapil Kushwaha",
+                      "first_name": "Kapil",
+                      "last_name": "Kushwaha",
+                      "email": "kapilkushwaha1@gmail.com",
+                      "phone": "+91-9717536222",
+                      "address": {
+                          "city": "Chennai",
+                          "pincode": "",
+                          "state": "Tamil Nadu",
+                          "address1": ""
+                      },
+                      "job_ids": [],
+                      "languages": [],
+                      "skills": [
+                          "Analytics",
+                          "Data Science",
+                          "Machine Learning",
+                          "Artificial Intelligence",
+                          "Deep Learning",
+                          "Natural Language Processing",
+                          "Data Engineering",
+                          "Statistical Methods",
+                          "Descriptive, Diagnostics, Predictive, Preventive Analytics Predictive Maintenance",
+                          "Anomaly Detection",
+                          "Pricing",
+                          "Demand Forecasting",
+                          "Decision Making",
+                          "Operational Analytics Supervised (Regression, Classification)",
+                          "Unsupervised (Regression and Classification)",
+                          "Deep Learning (ANN, RNN, LSTM)",
+                          "Timeseries (Dart)",
+                          "OpenCV",
+                          "Conversational AI",
+                          "Generative AI",
+                          "Transformers",
+                          "Transfer Learning",
+                          "Optimizer",
+                          "NLP",
+                          "Collaborative Filtering",
+                          "Visualization (Power BI, Talend, Qlik, Tableau)",
+                          "Data pipeline (Kafka, Spark)",
+                          "Big Data (Ecosystem)",
+                          "SQL",
+                          "NoSQL",
+                          "Web services",
+                          "Java/J2EE"
+                      ],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "Post Graduate in Data Science Business Management",
+                              "from_year": "2020",
+                              "to_year": "2021",
+                              "percentage": "",
+                              "university": "Joint from IIT Madras and IIM Bangalore",
+                              "specialization": ""
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Associate Director",
+                              "start_date": "2022-03-01",
+                              "end_date": "2023-03-01",
+                              "company": "Trigent Software",
+                              "state": "Karnataka",
+                              "city": "Bangalore",
+                              "responsibilities": "Thought Leadership, Solving Business Problems with Creative and efficient technical solutions, Strategic Planning in current and future external and internal business environments, Oversee and ensure Data Science and Artificial Intelligence Portfolio from Financial, project delivery, and sourcing perspectives. Assist on Project Management, Solutioning, Pre Sales POC MVP, DS and AI Solution Design and Architecture and Delivery. Creating the strategy for the problem space in line with the overall vision of the organization and through feedback from internal and external stakeholders. Implementing reusable and fit-for-future platform optimization techniques and services through an automate-first mindset. Build and manage a team of COE, data scientists, project and product managers deliver high-quality AI products and services. Collaborate with cross-functional teams to identify needs and opportunities and business roadmaps. Grow the Team and enable globally distributed team to support and anticipate business needs and talent development. Coach Mentor, Motivate diverse teams on project fast paced environment. Continuously grow and update knowledge base in areas of Data Science and AI, Research and Technology innovations."
+                          },
+                          {
+                              "title": "Senior Project Manager",
+                              "start_date": "2017-02-01",
+                              "end_date": "2021-01-01",
+                              "company": "Infinite Computer Solutions",
+                              "state": "Tamil Nadu",
+                              "city": "Chennai",
+                              "responsibilities": "Performed Leadership roles in Advanced Analytics and Data Science Practices, Team Building, Governance, Scope of Work, Customer Environment, Data Collection, System (Reliability, Adaptability, Maintainability, Scalability), Collaboration. Consulting: Propose Solutions to Business Problems, Incorporated Innovative Tools, Analyze technical approaches. Team Building: Build Data Science and Analytics team, set up Transformation, Infrastructure, Full stack, Traditional Software Experts – CoE and Data Science Center of Focus (CoF), Breaking Silos across functionals and verticals for POC. Managed Portfolio of projects, Assist Design and Development, AI ML, AutoML, MLOps, Adversarial Affects, Data Pipelines. Use Cases: Network Analytics, Private Network 5G, Public Networks (4G, 3G, 2G, FL), Marketing Analytics, Segmentation, Event, Campaign, Crowd Analytics Predictive Analytics, Customer Experience Management, Topic Modeling. Assist and manage Proof of Concepts: Network and Subscriber Analytics Predictive analytics tools (Classical, Clustering, Forecast Model, Outliers, Time Series Model), Light Service Operation Center, Network Management with Traffica, SQM, Customer Lifetime Value Model (CLVM), Market Analytics, Decision Making Systems, Campaigns Analysis, GIS based Reports."
+                          },
+                          {
+                              "title": "Senior Project Manager",
+                              "start_date": "2015-08-01",
+                              "end_date": "2016-07-01",
+                              "company": "ASM Technologies",
+                              "state": "Maharashtra",
+                              "city": "Navi Mumbai",
+                              "responsibilities": "Managed Scope of Work, Design and Development, Quality Assurance, Middleware Applications, IOS, Android Apps. As a Senior Project Manager implemented POC and MVP for GTM, ICT Application based on Android, IOS, Advertising Middleware, Platform Integration, Features roadmap for Retails and Jio Connected Applications, Connected Things. Assist on Design and Development of ICT Apps over Android, IOS, Real time features, Buy Online, Advertising Platform. Technology Stack: Middleware – LAMP, Full Stack, React, Angular, Java J2EE, SSO, Google Analytics, Payment Gateways."
+                          },
+                          {
+                              "title": "Senior Project Manager",
+                              "start_date": "2007-05-01",
+                              "end_date": "2015-03-01",
+                              "company": "IBM India",
+                              "state": "Karnataka",
+                              "city": "Bangalore",
+                              "responsibilities": "Proactively identify growth opportunities and measure maturity and evolution paths in Transformations, Cloud, GIS, Analytics. Other Telecom Experiences, 8 Years (1999 – 2007)."
+                          }
+                      ],
+                      "years_of_experience": 20,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload16/Kapil Kushwaha - Associate Director Data Sceince and AI Consulting.pdf",
+                      "notes": null,
+                      "age": 0,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "Overall, 20 Years Experience, Leadership, building End to End Data Science and AI Ecosystem, Advanced Analytics and Visualization with 100+ million USD revenue, YOY 25% Growth, Span of control 100+ HC. Played various stints in Senior Management and as Individual Contributor in improvising data-driven solutions. Oversees Analytics, Data Science, Artificial Intelligence Account portfolio from financial, project delivery, and sourcing perspectives. Strategic Planning and Thinking in the context of the current and future external and internal business environment and defines plans that take such factors into consideration. Assisting Solution Design, Delivery, Project Management, POC MVP from Solutioning, financial, and sourcing perspective. Manages client relationships at operational and strategic levels to minimise the risk of attrition and maximise the growth and longevity of relationships. Create and validate architecture design and recommend best designs. Responsible for enabling the team to support growth, anticipate business needs, growing globally distributed teams, coach and mentor individuals, lead and motivate, assist in Change Management, Team Development, and Hiring.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-04-28T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  },
+                  {
+                      "_id": "69673bfb54f63603dab37d9a",
+                      "recruiter_id": null,
+                      "old_candidate_id": 109926,
+                      "recruiter_username": null,
+                      "full_name": "Vishnu Prabha",
+                      "first_name": "Vishnu",
+                      "last_name": "Prabha",
+                      "email": "vishnuprabha36@gmail.com",
+                      "phone": "7012764061",
+                      "address": {
+                          "city": "India",
+                          "pincode": "",
+                          "state": "",
+                          "address1": ""
+                      },
+                      "job_ids": [],
+                      "languages": [
+                          "English",
+                          "Hindi",
+                          "Malayalam",
+                          "Tamil"
+                      ],
+                      "skills": [
+                          "MS Excel",
+                          "UK Payroll",
+                          "Workday",
+                          "Tally",
+                          "SQL"
+                      ],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "MBA",
+                              "from_year": "2016",
+                              "to_year": "2018",
+                              "percentage": "",
+                              "university": "Presidency College, Bangalore",
+                              "specialization": "HR & Marketing"
+                          },
+                          {
+                              "degree": "BBM",
+                              "from_year": "2013",
+                              "to_year": "2016",
+                              "percentage": "",
+                              "university": "Taliparamba Arts & Science College",
+                              "specialization": "Marketing"
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Senior Payroll Executive",
+                              "start_date": "2020-06-01",
+                              "end_date": "Present",
+                              "company": "Concentrix",
+                              "state": "India",
+                              "city": "",
+                              "responsibilities": "UK Payroll processing, Attendance tracking, Workday management, Customer Ticket Handling"
+                          },
+                          {
+                              "title": "HR Coordinator (Contract Role)",
+                              "start_date": "2019-11-01",
+                              "end_date": "2020-04-15",
+                              "company": "Trigent Software",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Mass Recruitment, Attendance tracking, Interviewing, Payslip generation"
+                          },
+                          {
+                              "title": "HR & Payroll Executive",
+                              "start_date": "2018-08-01",
+                              "end_date": "2019-08-01",
+                              "company": "Avikam Logistics Pvt Ltd",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Payroll management, Attendance management, Statutory compliance, Payslip generation, Employee Joining formalities"
+                          }
+                      ],
+                      "years_of_experience": 1.42,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload17/vushnuprabha36_gmailDotcom.pdf",
+                      "notes": null,
+                      "age": 29,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "To build a successful career by working in a challenging environment, where I can utilize my knowledge, innovative ideas for amplifying the profit and elevating the reputation of the firm.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-04-28T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  },
+                  {
+                      "_id": "69673bfd54f63603dab39855",
+                      "recruiter_id": null,
+                      "old_candidate_id": 127564,
+                      "recruiter_username": null,
+                      "full_name": "Nadiya Begum",
+                      "first_name": "Nadiya",
+                      "last_name": "Begum",
+                      "email": "nadiyab24@gmail.com",
+                      "phone": "9113686880",
+                      "address": {
+                          "city": "Bangalore",
+                          "pincode": "560037",
+                          "state": "",
+                          "address1": "Ramesh Layout (near HAL), Yemalur"
+                      },
+                      "job_ids": [],
+                      "languages": [
+                          "English",
+                          "Hindi",
+                          "Kannada"
+                      ],
+                      "skills": [
+                          "End to End Recruitment for IT & non IT Skills",
+                          "Vendor Management",
+                          "Client Management",
+                          "End to end interview process coordination",
+                          "Offer generation",
+                          "Data management",
+                          "Hands on various ATS platforms",
+                          "Hands on job portals",
+                          "MS-Office: MS-Word, MS-PowerPoint, MS-Excel",
+                          "WPS Office: WPS-writer & WPS-Spreadsheet",
+                          "Operating System: Windows XP, Windows 7, Windows 8, Windows 10 & basic Ubuntu"
+                      ],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "BBM",
+                              "from_year": "2012",
+                              "to_year": "2015",
+                              "percentage": "",
+                              "university": "St. Ann's First Grade College (Bangalore University)",
+                              "specialization": ""
+                          },
+                          {
+                              "degree": "HEBA",
+                              "from_year": "2010",
+                              "to_year": "2012",
+                              "percentage": "",
+                              "university": "St. Charles PU College (Karnataka Board of Higher Secondary Education)",
+                              "specialization": ""
+                          },
+                          {
+                              "degree": "",
+                              "from_year": "2002",
+                              "to_year": "2010",
+                              "percentage": "",
+                              "university": "Goodwill Girl's High School (Karnataka Board of Secondary Education)",
+                              "specialization": ""
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Recruitment Executive",
+                              "start_date": "2022-05-01",
+                              "end_date": "2023-04-30",
+                              "company": "Google",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Coordinating all logistics of onsite, phone, and virtual candidate interviews or hiring committee meetings across multiple time zones and locations, including complex scheduling at scale and meeting room booking/candidate travel arrangements when applicable. Handling strong partnerships with Google Staffing, interviewers/hiring committee members, and candidates through timely follow-up, clear communication, thoroughness in work product, and superb attention to detail. Managing data integrity and update candidate records in Google's applicant tracking system (skyvine/salesforce), including confidential application materials. Manage to meet and exceed personal and team metrics and targets. Experience in Google Workspace (Gmail, Calendar, Google Docs, etc)"
+                          },
+                          {
+                              "title": "Recruitment Coordinator",
+                              "start_date": "2021-06-01",
+                              "end_date": "2022-05-31",
+                              "company": "Aeries Technology",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Taking care of Coordination for locations Bangalore, Hyderabad, and Mumbai for interviews & offers, including scheduling and coordinating US client calls. Handling the end-to-end interview process: Interview scheduling, follow-ups with candidates, coordinating with the panels for the interview slots, patching the interview calls, and getting the feedback. Handling offer preparation, offer releasing, documentation – pre-documentation & post documentation and sharing the K check (documents docket) to HR team within the given TAT. Initiating K verification (BGV) for candidates who are joining us immediately to less than 30 days from the day of offer release and coordinating with the KPMG team for any clarifications. Getting required approvals on the BGV status report – Green, Amber & Red."
+                          },
+                          {
+                              "title": "Senior HR Executive",
+                              "start_date": "2020-07-01",
+                              "end_date": "2021-01-31",
+                              "company": "No Broker Technologies",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Handling end to end sales hiring. Currently hiring for positions like – Field operations, Key Account Manager, Financial solution deployment executive, Territory Sales Manager, Area Sales Manager, and City Head. Understanding the requirement of the business and fulfilling them in the given stipulated time. Taking care of lateral hiring. Maintaining the daily recruitment tracker. Vendor Management. Responsible for handling any escalations in employee issues or concerns in an efficient and ethical manner."
+                          },
+                          {
+                              "title": "IT Recruiter",
+                              "start_date": "2019-11-01",
+                              "end_date": "2020-04-30",
+                              "company": "ITC InfoTech (T&M Services Consulting Pvt Ltd)",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Managing the entire gamut of the Recruitment cycle (Internal hiring) and closing the position within the deadline - responsible for in-house hiring, Interview Coordination, offer letter Generation, Documentation, Client Handling, Salary negotiation, Vendor Management, etc. Arranging and managing different Interviews like F2F, Telephonic Interviews, WebEx, and Skype interviews. Responsible for strategic process and tracking all candidate activity in the database, internet searches, direct sourcing, and internal referrals using Kenexa ATS and HIRE alchemy. Interact with Internal Hiring Manager or Business Managers and LOB Heads in gathering the requisition. Understanding Job Description & Job Specification of assigned positions and sourcing candidates through - Job Portals – Naukri and LinkedIn (resume search & job posting), References Networking, and Internal database repositories."
+                          },
+                          {
+                              "title": "Recruitment Analyst",
+                              "start_date": "2018-01-01",
+                              "end_date": "2019-01-31",
+                              "company": "Trigent Software",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Handled end-to-end recruitment process. Worked on IT & Non-IT Recruitment (BPO Hiring) - PAN INDIA, Rolling contract, Entry/Mid-level hiring. Understand the client's requirements. Sourcing CVs through various Job Portals, Job Posting, References, and Database. Sourcing profiles from job boards like Sixth Sense, Naukri, Monster, and LinkedIn. Screening and shortlisting the candidates for the further interview process, sharing the same with the Clients for further process. Performing the required follow-ups with the candidates. Handled complete documentation process after selection till onboarding. Preparing team performance tracker - daily and weekly. Maintaining the database - personal tracker and client trackers."
+                          },
+                          {
+                              "title": "Recruitment Analyst",
+                              "start_date": "2016-07-01",
+                              "end_date": "2017-11-30",
+                              "company": "Ninegee",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Handled End-to-end recruitment activities from requirement gathering, sourcing CVs from job portals, screening, shortlisting, scheduling interviews, follow-ups till onboarding the selected candidate. End to End Recruitment Process proficient in handling IT profiles. Worked on PAN India hiring, Contract to hire & Permanent position, Entry/Mid-level hiring. Sourcing profiles using Job Board - Naukri. Shortlisting candidates based on the specific IT requirement. Scheduling interviews with the client. Collaborate with hiring managers to identify future hiring needs. Proper tracking of profiles and generating daily reports on the status of various recruitment metrics. Responsible to reach target in stipulated time. Preparation of Reports and Trackers on daily, weekly and monthly basis. Maintaining Database."
+                          }
+                      ],
+                      "years_of_experience": 5.08,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload18/Naukri_NadiyaB.pdf",
+                      "notes": null,
+                      "age": 30,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "Seeking a challenging position in the field of Human resources, where my skills and knowledge can add value to the growth of the organization and develop my skills to organization potential.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-04-30T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  },
+                  {
+                      "_id": "69673bfd54f63603dab39a86",
+                      "recruiter_id": null,
+                      "old_candidate_id": 129068,
+                      "recruiter_username": null,
+                      "full_name": "T. Sriniavasan Iyengaar",
+                      "first_name": "T. Sriniavasan",
+                      "last_name": "Iyengaar",
+                      "email": "srini20210@gmail.com",
+                      "phone": "+919884552617",
+                      "address": {
+                          "city": "Chennai",
+                          "pincode": "",
+                          "state": "Tamil Nadu",
+                          "address1": ""
+                      },
+                      "job_ids": [],
+                      "languages": [
+                          "English",
+                          "Hindi",
+                          "Tamil",
+                          "Bengali",
+                          "Oriya"
+                      ],
+                      "skills": [
+                          "Sales",
+                          "Business Development",
+                          "Client Relationship Management",
+                          "Account Management",
+                          "Team Management",
+                          "Market Forecasting",
+                          "CRM",
+                          "Marketing Strategies",
+                          "Lead Generation",
+                          "Sales Closures"
+                      ],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "MBA",
+                              "from_year": "2009",
+                              "to_year": "2011",
+                              "percentage": "",
+                              "university": "Alagappa University, Chennai",
+                              "specialization": "International Business"
+                          },
+                          {
+                              "degree": "M.Sc.",
+                              "from_year": "2007",
+                              "to_year": "2009",
+                              "percentage": "",
+                              "university": "Alagappa University, Chennai",
+                              "specialization": "Information Technology"
+                          },
+                          {
+                              "degree": "BCA",
+                              "from_year": "2000",
+                              "to_year": "2003",
+                              "percentage": "",
+                              "university": "University of Madras, Chennai",
+                              "specialization": "Computer Science"
+                          },
+                          {
+                              "degree": "D.M.E.",
+                              "from_year": "1995",
+                              "to_year": "1997",
+                              "percentage": "",
+                              "university": "T.M. Polytechnic / Directorate of Technical Education, Chennai",
+                              "specialization": ""
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Business Development Manager",
+                              "start_date": "2018-04-01",
+                              "end_date": "2019-06-30",
+                              "company": "Trigent Software",
+                              "state": "Karnataka",
+                              "city": "Bangalore",
+                              "responsibilities": "Responsible for originating new business, account management, achieving sales targets, delivering customer presentations, managing sales cycle, mentoring BDE team, and maintaining client relationships."
+                          },
+                          {
+                              "title": "Consultant (Contract Engagement) Business Development",
+                              "start_date": "2017-10-01",
+                              "end_date": "2018-02-28",
+                              "company": "Changepond Technologies",
+                              "state": "Tamil Nadu",
+                              "city": "Chennai",
+                              "responsibilities": "Hired, mentored, and managed a BDE team, drove new business development initiatives, managed campaigns for IT services, implemented sales strategies, and identified new business opportunities."
+                          },
+                          {
+                              "title": "Business Development Manager",
+                              "start_date": "2015-02-01",
+                              "end_date": "2017-04-30",
+                              "company": "iLink Systems",
+                              "state": "Tamil Nadu",
+                              "city": "Chennai",
+                              "responsibilities": "Identified and managed new business opportunities, led sales presentations, met revenue goals, and brought in new clients for cloud-based solutions."
+                          },
+                          {
+                              "title": "Business Development Manager",
+                              "start_date": "2011-09-01",
+                              "end_date": "2014-12-31",
+                              "company": "Saksoft, Ltd.",
+                              "state": "Tamil Nadu",
+                              "city": "Chennai",
+                              "responsibilities": "Instrumental in bringing new opportunities for IT services, exceeded sales targets, closed new accounts, managed BDE team, and handled account management."
+                          },
+                          {
+                              "title": "Business Development Executive",
+                              "start_date": "2009-06-01",
+                              "end_date": "2011-08-31",
+                              "company": "Minacs IT Services",
+                              "state": "Karnataka",
+                              "city": "Bangalore",
+                              "responsibilities": "Handled business development for IT services, generated leads, converted leads into business opportunities, and closed deals worth over 2 million USD."
+                          },
+                          {
+                              "title": "Business Development Executive",
+                              "start_date": "2007-08-01",
+                              "end_date": "2009-05-31",
+                              "company": "Levergent Technologies",
+                              "state": "Tamil Nadu",
+                              "city": "Chennai",
+                              "responsibilities": "Contributed to inside sales, built a sales pipeline, generated leads, and managed product offerings."
+                          }
+                      ],
+                      "years_of_experience": 13,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload18/Naukri_TSrinivasanIyengar[13y_0m].docx",
+                      "notes": null,
+                      "age": 42,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "Experienced Business Development Professional with a strong background in sales, account management, team management, and client relationship management. Skilled in market forecasting and strategic business planning. Excels in working with international clients and driving new business opportunities.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-04-30T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  },
+                  {
+                      "_id": "69673bf454f63603dab32069",
+                      "recruiter_id": null,
+                      "old_candidate_id": 47298,
+                      "recruiter_username": null,
+                      "full_name": "Sendhil Kugan",
+                      "first_name": "Sendhil",
+                      "last_name": "Kugan",
+                      "email": "sendhilkugann@gmail.com",
+                      "phone": "9945044005",
+                      "address": {
+                          "city": "Bangalore",
+                          "pincode": "",
+                          "state": "",
+                          "address1": ""
+                      },
+                      "job_ids": [],
+                      "languages": [
+                          "English",
+                          "Hindi",
+                          "Kannada",
+                          "Tamil"
+                      ],
+                      "skills": [],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "BBA",
+                              "from_year": "2013",
+                              "to_year": "2016",
+                              "percentage": "",
+                              "university": "Salem Periyar University",
+                              "specialization": ""
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Assistant Manager - Talent Acquisition",
+                              "start_date": "2021-02-08",
+                              "end_date": "Present",
+                              "company": "Visionet Systems",
+                              "state": "",
+                              "city": "Bangalore",
+                              "responsibilities": "Monitor and review progress against recruitment goals and objectives. Analyze recruiting activity and metrics to provide insights and take corrective action as needed. Partner with leadership to forecast hiring needs based on business growth plans. Act as the go-to contact for all the BU heads to ensure proper stakeholder engagement. Directly responsible for winning three logos within a span of 3 months."
+                          },
+                          {
+                              "title": "Senior Technical Recruiter",
+                              "start_date": "2020-09-01",
+                              "end_date": "2021-08-02",
+                              "company": "Trigent Software",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Managed a team of 4 recruiters and individual contributor responsible for recruiting for all technical disciplines and experience levels. Designed and implemented metrics to measure, improve, and deliver recruitment efficiency. Managed VMS accounts, recruiting for internal requirements and for SOW projects."
+                          }
+                      ],
+                      "years_of_experience": 0.92,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload12/files/Naukri_SendhilKugan[14y_0m].pdf",
+                      "notes": null,
+                      "age": 29,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "Talent Acquisition Professional with over 15 years of experience in Talent Strategy & Management. Experienced in managing end to end hiring in India and the US. Extensive experience managing global stakeholders. Resourceful manager offering history of succession in coordinating and monitoring operations across various departments globally and within India. Effective leader and problem-solver dedicated to streamlining operations to decrease costs and promote organizational efficiency.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-04-25T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  },
+                  {
+                      "_id": "69673c0154f63603dab3c4b8",
+                      "recruiter_id": null,
+                      "old_candidate_id": 155597,
+                      "recruiter_username": null,
+                      "full_name": "NELSON PREM RAJ",
+                      "first_name": "NELSON",
+                      "last_name": "PREM RAJ",
+                      "email": "nelsonds786@gmail.com",
+                      "phone": "8885946290",
+                      "address": {
+                          "city": "Hyderabad",
+                          "pincode": "500027",
+                          "state": "Telangana",
+                          "address1": "H.no :3-3-389, Chappal Bazar Masjid, 3rd right lane after Hari Majid, Kachiguda"
+                      },
+                      "job_ids": [],
+                      "languages": [
+                          "English",
+                          "Hindi",
+                          "Telugu",
+                          "Tamil"
+                      ],
+                      "skills": [
+                          "Training and Development",
+                          "Communication Skills",
+                          "MS Office",
+                          "Leadership",
+                          "Team Handling"
+                      ],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "B.Sc Agriculture and Rural Development",
+                              "from_year": "2008",
+                              "to_year": "2012",
+                              "percentage": "68%",
+                              "university": "",
+                              "specialization": ""
+                          },
+                          {
+                              "degree": "Board of Intermediate (B.P.C)",
+                              "from_year": "2006",
+                              "to_year": "2008",
+                              "percentage": "62%",
+                              "university": "",
+                              "specialization": ""
+                          },
+                          {
+                              "degree": "Board of Secondary Education (SSC)",
+                              "from_year": "2006",
+                              "to_year": "2006",
+                              "percentage": "57%",
+                              "university": "",
+                              "specialization": ""
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Training Team Lead",
+                              "start_date": "2023-01-01",
+                              "end_date": "Present",
+                              "company": "Cognizant Technologies",
+                              "state": "Telangana",
+                              "city": "Hyderabad",
+                              "responsibilities": "Conducted training deliveries for POI communication team, supervised training for 150 associates, provided feedback for performance improvement."
+                          },
+                          {
+                              "title": "Subject Matter Expert",
+                              "start_date": "2021-06-01",
+                              "end_date": "2022-12-31",
+                              "company": "Cognizant Technologies",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Took charge of training and development, contributed to process improvement, and maintained process knowledge flow."
+                          },
+                          {
+                              "title": "Process Trainer",
+                              "start_date": "2019-05-01",
+                              "end_date": "2021-06-01",
+                              "company": "Cognizant Technologies",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Trained 1400 associates, improved production and quality for new hires and the team."
+                          },
+                          {
+                              "title": "Quality Analyst",
+                              "start_date": "2018-05-01",
+                              "end_date": "2019-05-01",
+                              "company": "Cognizant Technologies",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Focused on error trends, ensured production and quality met standards, improved quality from 85% to 99%."
+                          },
+                          {
+                              "title": "Editor/Annotator",
+                              "start_date": "2017-05-01",
+                              "end_date": "2018-05-01",
+                              "company": "Cognizant Technologies",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Worked on virtual intelligence and machine learning processes, trained for pilot processes effectively."
+                          },
+                          {
+                              "title": "Advisor",
+                              "start_date": "2016-10-01",
+                              "end_date": "2017-02-01",
+                              "company": "Trigent Software",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Worked on E-commerce projects for Sears Holdings, handled various processes and client interactions."
+                          },
+                          {
+                              "title": "Process Associate",
+                              "start_date": "2014-07-01",
+                              "end_date": "2016-02-01",
+                              "company": "Minvesta Infotech LTD",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Analyzed processes for Google Maps, focused on 2D and 3D maps, POI, and quality in GPS and maps navigation."
+                          }
+                      ],
+                      "years_of_experience": 8,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload19/NELSON PREM RAJ_Resume_GO.pdf",
+                      "notes": null,
+                      "age": 34,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "Experienced Training Team Lead with 8 years of overall experience in communication, training, and quality assurance. Skilled in MS Office, leadership, and team handling. Looking for opportunities to further enhance skills and contribute to organizational growth.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-05-01T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  },
+                  {
+                      "_id": "69673c0054f63603dab3c1f8",
+                      "recruiter_id": null,
+                      "old_candidate_id": 154147,
+                      "recruiter_username": null,
+                      "full_name": "Neha Thakur",
+                      "first_name": "Neha",
+                      "last_name": "Thakur",
+                      "email": "thakurneha175@gmail.com",
+                      "phone": "9740461213",
+                      "address": {
+                          "city": "Bangalore",
+                          "pincode": "",
+                          "state": "",
+                          "address1": ""
+                      },
+                      "job_ids": [],
+                      "languages": [],
+                      "skills": [
+                          "Communication skills",
+                          "Administrative expert",
+                          "HR Operations",
+                          "HR strategy creation & execution",
+                          "Coaching",
+                          "Learning & Development",
+                          "Recruitment and selection",
+                          "Employee experience expertise",
+                          "Employee Engagement",
+                          "People Management",
+                          "HR Analytics",
+                          "HR reporting skills",
+                          "Cultural awareness"
+                      ],
+                      "more_skills": [],
+                      "education": [
+                          {
+                              "degree": "M.B.A",
+                              "from_year": "2013",
+                              "to_year": "2015",
+                              "percentage": "",
+                              "university": "Banasthali University, Rajasthan",
+                              "specialization": ""
+                          }
+                      ],
+                      "experience": [
+                          {
+                              "title": "Associate Manager-HR",
+                              "start_date": "2019-11-01",
+                              "end_date": "Present",
+                              "company": "iQuanti India Pvt Ltd",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "As an HR Business Partner handling BU size of over 500+ employees and collaborating with management to enable measurable difference in employee focus and increase productivity. Handling own team of 5 resources. Formulating partnerships across the team to facilitate delivery of value-added services to management and employees. Providing mentorship to trainee HR professionals. Managing and resolving complex employee-relations issues. Collaborating on employee retention strategies, performance management, and employee engagement initiatives. Implementing HRM interventions on employee wellness, diversity, and talent management. Handling onboarding leadership process, HR advisors, and investigations. Working closely with employees to resolve core issues, aligning individual goals, defining KRAs, and implementing performance reviews and motivational strategies. Managing payroll, regulatory compliance, employee safety, and health. Preparing HR-related reports for management and HR team. Conducting internal & external audits."
+                          },
+                          {
+                              "title": "HR Executive",
+                              "start_date": "2017-11-01",
+                              "end_date": "2019-09-30",
+                              "company": "Mobile Programming India Pvt Ltd",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Handled CBU size of over 700+ employees. Supported in performance appraisal activities, HR reports management, employee engagement activities, and resolution of issues. Managed leadership hiring, offer management, and induction processes. Aligned HR functions with business strategies, drafted policies, conducted employee satisfaction surveys, and managed engagement activities. Communicated project progress and collaborated with stakeholders to implement HR initiatives aligned with business objectives."
+                          },
+                          {
+                              "title": "Recruitment Analyst",
+                              "start_date": "2016-11-01",
+                              "end_date": "2017-10-31",
+                              "company": "Trigent Software",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Handled complete recruitment cycle from Manpower Planning to candidate induction. Recruited IT professionals, designed and implemented recruitment strategies, and conducted interviews and screenings."
+                          },
+                          {
+                              "title": "IT Recruiter",
+                              "start_date": "2015-07-01",
+                              "end_date": "2016-10-31",
+                              "company": "Mobile Programming India Pvt Ltd",
+                              "state": "",
+                              "city": "",
+                              "responsibilities": "Handled recruitment for IT professionals, designed sourcing strategies, conducted screenings and interviews, negotiated salaries, prepared offer letters, and managed induction processes."
+                          }
+                      ],
+                      "years_of_experience": 7,
+                      "website": "",
+                      "portfolio": "",
+                      "filename": "upload19/Neha Thakur- Associate Manager-HR.docx",
+                      "notes": null,
+                      "age": 0,
+                      "dob": null,
+                      "source": "go",
+                      "summary": "Corporate HR with 7+ years of experience in end-to-end HR process & HRBP with strong knowledge with good exposure in different domains (IT & Digital Marketing). Aim to work on developing and investing in self-learning to help grow in career as an HR Business Partner.",
+                      "viewed_by": null,
+                      "viewed_on": null,
+                      "updated_at": "2025-05-08T23:21:41.000Z",
+                      "created_at": "2024-05-01T18:30:00.000Z",
+                      "status": "Active",
+                      "migration": true,
+                      "overwritten": false,
+                      "latest_note": null
+                  }
+              ],
+              "pagination": {
+                  "currentPage": 1,
+                  "limit": 10,
+                  "totalDocs": 7
+              },
+              "searchInfo": {
+                  "originalQuery": "Database Management previously worked in Trigent Software",
+                  "parsedQuery": {
+                      "semanticQuery": "Database Management",
+                      "company": "Trigent Software",
+                      "requiredSkills": []
+                  },
+                  "semanticRatio": 1,
+                  "mode": "semantic"
+              }
+          }

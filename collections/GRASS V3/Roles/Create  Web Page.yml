@@ -1,0 +1,24 @@
+info:
+  name: Create  Web Page
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/roles/create-page"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"pageName\": \"CV Parse\",\r
+
+      \    \"pagePath\": \"/cv-parse\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Validation Private Urls
+  type: folder
+  seq: 9
+
+request:
+  auth: inherit

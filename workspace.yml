@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "Office"
+  type: workspace
+
+collections:
+  - name: "GRASS V3"
+    path: "collections/GRASS V3"
+
+specs:
+
+docs: ''

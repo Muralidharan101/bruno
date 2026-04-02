@@ -1,0 +1,15 @@
+info:
+  name: get JD
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{local_url}}/api/jobs/v1/getJd/690b3d037618cd5e0cdbdaa3"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

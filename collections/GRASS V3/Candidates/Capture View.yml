@@ -1,0 +1,24 @@
+info:
+  name: Capture View
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/candidates/captureView"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"candidateId\": \"690b42407618cd5e0cef98b3\",\r
+
+      \  \"jobId\": \"690b3d037618cd5e0cdbda9a\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Create category
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/roles/create-category"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"category_name\": \"Candidate\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,32 @@
+info:
+  name: saveChanges
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/parser/v1/save-changes"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"candidateId\": \"690b3d037618cd5e0cdbdaa6\", \r
+
+      \    \"email\": \"reddimisrikanthreddy7@gmail.com\", \r
+
+      \    \"phone\": \"9700456628\", \r
+
+      \    \"firstName\": \"Srikanth\", \r
+
+      \    \"lastName\": \"Reddy\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTBiM2NmZDc2MThjZDVlMGNkYmM5MTIiLCJlbWFpbCI6ImFkbWluQGdvam9icy5iaXoiLCJpYXQiOjE3NjIzNDgxMDUsImV4cCI6MTc2NDk0MDEwNX0.6SJdTz5G4K7Ea8VyB4HWegPn7lu1zcBHQ9wqo4EYAhM
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

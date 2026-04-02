@@ -1,0 +1,18 @@
+info:
+  name: Process JD by job_id
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/search-query/process/698ec5ee4a0c449587b030b8"
+  body:
+    type: text
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

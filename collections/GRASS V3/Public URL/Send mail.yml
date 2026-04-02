@@ -1,0 +1,26 @@
+info:
+  name: Send mail
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3001/plivo_v2/ai-caller/sendMail
+  body:
+    type: json
+    data: "{\r
+
+      \    \"mail_to\": \"\",\r
+
+      \    \"mail_subject\": \"\",\r
+
+      \    \"mail_body\": \"\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

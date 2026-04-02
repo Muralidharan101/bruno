@@ -1,0 +1,25 @@
+info:
+  name: Upload and parse
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/parser/v1/parse"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - postman-cloud:///1f0af296-827e-43d0-a48f-0e510e0a213f
+      - name: jobCode
+        type: text
+        value: GO/JC/005/2025
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

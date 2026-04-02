@@ -1,0 +1,15 @@
+opencollection: 1.0.0
+
+info:
+  name: GRASS V3
+
+request:
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OThlZDNiOTk1NTA5ODAwOTkxMDliMWIiLCJlbWFpbCI6InN1cGVyYWRtaW5AZ3Jhc3MuY29tIiwiaWF0IjoxNzcwOTY4MDEyLCJleHAiOjE3NzM1NjAwMTJ9.I-HtGkmFXuPZfsp1e2PN1sWVd-OfNVZq_Rm9lXOHq1o
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

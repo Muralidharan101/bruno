@@ -1,0 +1,28 @@
+info:
+  name: Vector
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/rag/vector-search"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"action\":\"vector_search_enhanced\",\r
+
+      \"keywords\":\"senior PHP,MongoDB developer with angular in chennai location\",\r
+
+      \"page\":1,\r
+
+      \"limit\":10\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

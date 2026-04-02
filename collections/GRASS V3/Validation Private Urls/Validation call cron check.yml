@@ -1,0 +1,26 @@
+info:
+  name: Validation call cron check
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{local_url}}/api/v1/ai-caller/check-cron"
+  body:
+    type: text
+    data: "{\r
+
+      \    \"mail_to\": \"\",\r
+
+      \    \"mail_subject\": \"\",\r
+
+      \    \"mail_body\": \"\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

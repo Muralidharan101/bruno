@@ -1,0 +1,28 @@
+info:
+  name: Send Mail to Candidate
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{local_url}}/api/v1/ai-caller/send-email"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"job_id\": \"692d1ebf3ba9c22dc677e4b6\",\r
+
+      \    \"candidate_id\": \"6931156fdd43e127577f613c\",\r
+
+      \    \"recruiter_id\": \"692d1eae3ba9c22dc677d22c\",\r
+
+      \    \"type\": \"job_description\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

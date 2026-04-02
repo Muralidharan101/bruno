@@ -1,0 +1,30 @@
+info:
+  name: Send Email to Canndidate
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://182.72.36.229/plivo_v2/ai-caller/sendMail
+  body:
+    type: json
+    data: "{\r
+
+      \    \"job_id\": \"692d1ebf3ba9c22dc677e4b6\",\r
+
+      \    \"candidate_id\": \"6931156fdd43e127577f613c\",\r
+
+      \    \"recruiter_id\": \"692d1eae3ba9c22dc677d22c\",\r
+
+      \    \"type\": \"job_description\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: a64e498d5dd7d84d602b6602f858f87a44a9e73014a6fbc8499fd2a42a7a7817
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

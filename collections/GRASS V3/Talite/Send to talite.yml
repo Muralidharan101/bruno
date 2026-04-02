@@ -1,0 +1,26 @@
+info:
+  name: Send to talite
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_url}}/api/tallite/v1/send"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"candidateId\": \"6931156fdd43e127577f613c\", \r
+
+      \    \"jobId\": \"6931720711e36545c0feec77\", \r
+
+      \    \"note\": \"Test Please Ignore\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
