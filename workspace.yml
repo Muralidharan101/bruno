@@ -4,6 +4,8 @@ info:
   type: workspace
 
 collections:
+  - name: "GRASS V2"
+    path: "collections/GRASS V2"
   - name: "GRASS V3"
     path: "collections/GRASS V3"
 
