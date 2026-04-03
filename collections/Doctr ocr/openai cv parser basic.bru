@@ -1,0 +1,19 @@
+meta {
+  name: openai cv parser basic
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8000/parse-cv-basic
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/muralidharan/Downloads/Mohamed Riyasudeen T_Resume_GO.pdf)
+}
+
+settings {
+  encodeUrl: true
+}

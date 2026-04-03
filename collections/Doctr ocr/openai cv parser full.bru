@@ -1,0 +1,19 @@
+meta {
+  name: openai cv parser full
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8000/parse-cv-full
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/muralidharan/Downloads/Jhansi Rani J_Resume_GO.pdf)
+}
+
+settings {
+  encodeUrl: true
+}

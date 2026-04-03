@@ -1,0 +1,15 @@
+meta {
+  name: Get All Registered
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:5000/api/registration/registration
+  body: text
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

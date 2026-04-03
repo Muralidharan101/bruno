@@ -1,0 +1,19 @@
+meta {
+  name: LLM parsing basic
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8000/parse-cv-with-ollama-basic
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(postman-cloud:///1f0af296-827e-43d0-a48f-0e510e0a213f)
+}
+
+settings {
+  encodeUrl: true
+}

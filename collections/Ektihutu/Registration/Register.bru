@@ -1,0 +1,49 @@
+meta {
+  name: Register
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api.ektuhitu.com/api/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "residentName": "John Doe",
+    "hospitalName": "City General Hospital",
+    "doctorName": "Dr. Smith",
+    "speciality": "Cardiology",
+    "contactNumber": "9876543210",
+    "patientId": "P-12345",
+    "identificationType": "Aadhar",
+    "idNo": "1234-5678-9012",
+    "requirementType": "Post-surgery recovery",
+    "expectedStay": 14,
+    "needs": ["Nursing Care", "Physiotherapy", "Meal Support"],
+    "otherNeeds": "Needs assistance with mobility in the morning",
+    "conditionDescription": "Recovering from knee replacement surgery. Stable but needs daily monitoring.",
+    "requestorName": "Jane Doe",
+    "relationship": "Daughter",
+    "requestorPhone1": "9123456789",
+    "requestorEmail1": "jane.doe@example.com",
+    "requestorAddress1": "123 Maple Street",
+    "requestorCity": "Mumbai",
+    "requestorPin": "400001",
+    "requestorCountry": "India",
+    "residentPhone1": "9876543210",
+    "residentEmail1": "john.doe@example.com",
+    "residentAddress1": "456 Oak Avenue",
+    "residentCity": "Mumbai",
+    "residentPin": "400001",
+    "residentCountry": "India",
+    "agreedToTerms": true
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

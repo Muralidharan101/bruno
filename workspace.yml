@@ -8,6 +8,10 @@ collections:
     path: "collections/GRASS V2"
   - name: "GRASS V3"
     path: "collections/GRASS V3"
+  - name: "Doctr ocr"
+    path: "collections/Doctr ocr"
+  - name: "Ektihutu"
+    path: "collections/Ektihutu"
 
 specs:
 
